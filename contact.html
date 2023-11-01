@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- custom js file -->
+    <script type="text/javascript" src="script.js"></script>
+    <script src="index.js"></script>
+    
+    
+   <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/733718af8a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    
+
+    
+    <title>Contact Page</title>
+</head>
+<body>
+    <!-- header section starts -->
+<header class="header">
+    <a href="#" class="logo">
+        <img src="Img/logo.png" alt="">
+    </a>
+<!-- navbar -->
+   <nav class="navbar" >
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Product</a>
+    <a href="contact.html">Contact</a>
+   </nav>
+
+   <div class="icons">
+    <div class="fas fa-search" id="search-btn"></div>
+    <div class="fas fa-shopping-cart" id="cart-btn" ></div>
+    <div class="fas fa-bars" id="menu-btn"></div>
+   </div>
+
+<div class="search-form">
+    <input type="search" id="search-box" placeholder="search here...">
+    <label for="search-box" class="fas fa-search"></label>
+
+   </div>
+<div class="cart-items-container" >
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img2.webp" alt="">
+        <div class="content">
+            <h3>FANS</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 1st cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img3.jpg" alt="">
+        <div class="content">
+            <h3>LED/LIGHTING</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 2nd cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img4.jpg" alt="">
+        <div class="content">
+            <h3>SWITCHGEARS</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 3rd cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img5.jpg" alt="">
+        <div class="content">
+            <h3>SWITCHES & ACCESSORIES</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 4th cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img6.jpg" alt="">
+        <div class="content">
+            <h3>WIRES & CABLE</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 5th cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img7.jpg" alt="">
+        <div class="content">
+            <h3>uPVC CONDUITS</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 6th cart end -->
+    <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="Img/img8.jpg" alt="">
+        <div class="content">
+            <h3>WEATHERING BOXES</h3>
+        <div class="price">$15.99/-</div>    
+        </div>
+    </div>
+    <!-- 7th cart end -->
+    
+
+    <a href="#" class="btn">Checkout now</a>
+</div>
+
+
+</header>
+<!-- header section ends -->
+
+<script type="text/javascript">
+    let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    searchForm.classList.remove('active');
+    cartItem.classList.remove('active');
+}
+
+let cartItem = document.querySelector('.cart-items-container');
+
+document.querySelector('#cart-btn').onclick = () =>{
+    cartItem.classList.toggle('active');
+    navbar.classList.remove('active');
+    searchForm.classList.remove('active');
+    
+}
+
+let searchForm = document.querySelector('.search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');
+    navbar.classList.remove('active');
+    cartItem.classList.remove('active');
+}
+
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+    searchForm.classList.remove('active');
+    cartItem.classList.remove('active');
+}
+</script>
+<!-- header section js end here -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact" style="margin-top: 15%;"> 
+    <div class="title">
+    <h1 class="heading"> <span>Contact </span> us</h1>
+    <div class="title">
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30157.18362993657!2d74.71668086381182!3d19.12309410158262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcba6357983113%3A0x935f12d2e921c765!2sSavedi%2C%20Ahmednagar%2C%20Maharashtra%20414003!5e0!3m2!1sen!2sin!4v1698682434124!5m2!1sen!2sin"  allowfullscreen="" loading="lazy"></iframe>
+        <form action="">
+            <h3>Get in touch</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="name">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="number">
+            </div>
+            <input type="submit" value="contact now" class="btn">
+        </form>
+
+    </div>
+</section>
+<!-- contact section ends -->
+</body>
+</html>
